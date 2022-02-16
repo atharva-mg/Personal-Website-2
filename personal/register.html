@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+    <title>knowme|user-registration</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="reg.validation.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Muli:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body onload="document.registration.userid.focus();">
+    <nav class="navbar">
+        <ul>
+            <li><a href="login.html">User Login</a></li>
+        </ul>  
+    </nav>
+
+    <section id="login" >
+        <div class="login-wrapper">
+          <div class="login-left"></div>
+          <div class="login-right">
+            <h1 class="login-heading">User Registration</h1>
+
+            <form name="registration" onsubmit="return formValidation();" action="connect.php" method="post">
+
+              <div class="input-group">
+                <input type="text" id="fname" name="firstName" class="field" size="20" required/>
+                <label for="firstName" class="input-label">First Name</label>
+              </div>
+
+              <div class="input-group">
+                <input type="text"  id="lname" name="lastName" class="field" size="20" required/>
+                <label for="lastName" class="input-label">Last Name</label>
+              </div>
+          
+              <div class="input-group">
+                <input type="email" id="email" name="email" class="field" size="50" required />
+                <label for="email"  class="input-label">Email</label>
+              </div>
+
+              <div class="input-group">
+                <input type="password" id="pswd" name="password" class="field" size="12" required />
+                <label for="password"  class="input-label">Password (Max 12 characters)</label>
+              </div>
+
+              <div class="input-group">
+                <input type="tel" id="number" name="number" class="field" size="10" 
+                pattern="[7-9]{1}[0-9]{9}" required  />
+                <label for="number"  class="input-label">Mobile Number</label>
+              </div>
+
+
+              <input type="submit" class="submit-btn" value="Submit" name="submit" />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      </a>
+    </div>
+
+</body>
+</html>
